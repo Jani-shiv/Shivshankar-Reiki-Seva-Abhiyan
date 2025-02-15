@@ -1,0 +1,146 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Gradient background */
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(240, 237, 237, 0.1);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Logo Animation */
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.6));
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px;
+}
+
+/* Hover Effects */
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Active Link */
+.nav-links a.active {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Underline Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #ffcc00;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* CTA Button */
+.book-btn {
+    background: #ffcc00;
+    color: #333;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+/* Button Glow Effect */
+.book-btn::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.book-btn:hover::before {
+    opacity: 1;
+}
+
+.book-btn:hover {
+    background: #ff8800;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 136, 0, 0.4);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .book-btn {
+        margin-top: 10px;
+    }
+}

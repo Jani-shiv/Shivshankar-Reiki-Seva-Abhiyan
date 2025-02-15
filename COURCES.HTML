@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reiki Healing Certification Levels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2A7F62;
+            --secondary: #FFD700;
+            --accent: #3E454C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #1E5957 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background: var(--primary);
+            padding: 1.5rem;
+            color: white;
+            position: relative;
+        }
+
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--primary) 0%, transparent 100%);
+            opacity: 0.1;
+        }
+
+        .card-body {
+            padding: 2rem;
+            position: relative;
+        }
+
+        .price-tag {
+            background: var(--secondary);
+            color: var(--accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        ul li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '✓';
+            color: var(--primary);
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background: #1E5957;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .testimonial-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .faq-section {
+            margin-top: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .faq-item {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateX(10px);
+        }
+            /* Navbar Styles */
+            .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #2A7F62 0%, #1E5957 100%);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .nav-links .active {
+            background: var(--secondary);
+            color: var(--accent);
+        }
+
+        .book-btn {
+            background: var(--secondary);
+            color: var(--accent);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .book-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Existing Styles */
+        :root {
+            --primary: #2A7F62;
+            --secondary: #FFD700;
+            --accent: #3E454C;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            margin-top: 80px; /* Space for fixed navbar */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #1E5957 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+</head>
+<body>
+        <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="1.html">
+                <img src="logo.jpg" alt="Shivshankar Reiki" style="box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius: 10px; transition: transform 0.3s ease; transform: scale(1.1)">
+            </a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="ABOUT.HTML">About</a></li>
+            <li><a href="SERVICES.HTML">Services</a></li>
+            <li><a href="EVENT.HTML">Events</a></li>
+            <li><a href="CONTACT.HTML">Contact</a></li>
+            <li><a href="COURSES.HTML" class="active">Courses</a></li>
+        </ul>
+        <div class="cta">
+            <a href="Booksession.html" class="book-btn">Book Now</a>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="header">
+            <h1>Reiki Healing Certification Program</h1>
+            <p>Embark on your journey to becoming a certified Reiki practitioner</p>
+        </header>
+
+        <div class="card-grid">
+            <!-- Level 1 Card -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-seedling icon"></i>
+                    <h2>Level 1 - Shoden</h2>
+                    <div class="badge">Foundation</div>
+                </div>
+                <div class="card-body">
+                    <div class="price-tag">FREE</div>
+                    <ul>
+                        <li>Introduction to Reiki philosophy</li>
+                        <li>Self-healing techniques</li>
+                        <li>Basic hand positions</li>
+                        <li>Chakra balancing basics</li>
+                        <li>21-day cleansing process</li>
+                    </ul>
+                    <p class="duration"><strong>Duration:</strong> 8 hours (1 day)</p>
+                    <a href="#" class="btn">Start Free Course</a>
+                </div>
+            </div>
+
+            <!-- Level 2 Card -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-hands icon"></i>
+                    <h2>Level 2 - Okuden</h2>
+                    <div class="badge">Practitioner</div>
+                </div>
+                <div class="card-body">
+                    <div class="price-tag">$299</div>
+                    <ul>
+                        <li>3 Sacred Reiki symbols</li>
+                        <li>Distance healing techniques</li>
+                        <li>Emotional healing methods</li>
+                        <li>Client session protocols</li>
+                        <li>Professional ethics</li>
+                    </ul>
+                    <p class="duration"><strong>Duration:</strong> 16 hours (2 days)</p>
+                    <a href="#" class="btn">Enroll Now</a>
+                </div>
+            </div>
+
+            <!-- Level 3 Card -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-dove icon"></i>
+                    <h2>Level 3 - Shinpiden</h2>
+                    <div class="badge">Master Teacher</div>
+                </div>
+                <div class="card-body">
+                    <div class="price-tag">$599</div>
+                    <ul>
+                        <li>Master symbol attunement</li>
+                        <li>Teaching methodologies</li>
+                        <li>Advanced healing techniques</li>
+                        <li>Business development</li>
+                        <li>Certification process</li>
+                    </ul>
+                    <p class="duration"><strong>Duration:</strong> 30 hours (1 week)</p>
+                    <a href="#" class="btn">Become Master</a>
+                </div>
+            </div>
+
+            <!-- Mastership Card -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-certificate icon"></i>
+                    <h2>Reiki Mastership</h2>
+                    <div class="badge">Master</div>
+                </div>
+                <div class="card-body">
+                    <div class="price-tag">$999</div>
+                    <ul>
+                        <li>Mastery of all Reiki symbols</li>
+                        <li>Attunement techniques</li>
+                        <li>Teaching methodologies</li>
+                        <li>Spiritual development</li>
+                        <li>Professional practice setup</li>
+                    </ul>
+                    <p class="duration"><strong>Duration:</strong> 40 hours (2 weeks)</p>
+                    <a href="#" class="btn">Become Master</a>
+                </div>
+            </div>
+
+            <!-- Grand Mastership Card -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-trophy icon"></i>
+                    <h2>Grand Mastership</h2>
+                    <div class="badge">Grand Master</div>
+                </div>
+                <div class="card-body">
+                    <div class="price-tag">$1,499</div>
+                    <ul>
+                        <li>Grand Master symbols</li>
+                        <li>Universal connection techniques</li>
+                        <li>Master-level teaching</li>
+                        <li>High-frequency healing</li>
+                        <li>Community leadership</li>
+                    </ul>
+                    <p class="duration"><strong>Duration:</strong> 60 hours (3 weeks)</p>
+                    <a href="#" class="btn">Become Grand Master</a>
+                </div>
+            </div>
+        
+
+<!-- Past Life Therapy Card -->
+        <div class="card">
+    <div class="card-header">
+        <i class="fas fa-clock icon"></i>
+        <h2>Past Life Therapy</h2>
+        <div class="badge">Specialized</div>
+    </div>
+    <div class="card-body">
+        <div class="price-tag">$499</div>
+        <ul>
+            <li>Understanding past life regression</li>
+            <li>Techniques for accessing past lives</li>
+            <li>Healing past life traumas</li>
+            <li>Integrating past life insights</li>
+            <li>Case studies and practice sessions</li>
+        </ul>
+        <p class="duration"><strong>Duration:</strong> 20 hours (1 week)</p>
+        <a href="#" class="btn">Enroll Now</a>
+    </div>
+</div>
+<!-- Hypno Therapist Course Card -->
+<div class="card">
+    <div class="card-header">
+        <i class="fas fa-brain icon"></i>
+        <h2>Hypno Therapist Course</h2>
+        <div class="badge">Specialized</div>
+    </div>
+    <div class="card-body">
+        <div class="price-tag">$699</div>
+        <ul>
+            <li>Introduction to hypnotherapy</li>
+            <li>Induction techniques</li>
+            <li>Deepening methods</li>
+            <li>Therapeutic applications</li>
+            <li>Case studies and practice sessions</li>
+        </ul>
+        <p class="duration"><strong>Duration:</strong> 24 hours (1 week)</p>
+        <a href="#" class="btn">Enroll Now</a>
+    </div>
+</div>
+<!-- Brahmandiy Rahasya 369 Card -->
+<div class="card">
+    <div class="card-header">
+        <i class="fas fa-universal-access icon"></i>
+        <h2>Brahmandiy Rahasya 369</h2>
+        <div class="badge">Specialized</div>
+    </div>
+    <div class="card-body">
+        <div class="price-tag">$999</div>
+        <ul>
+            <li>Understanding the secrets of the universe</li>
+            <li>Unlocking the power of 369</li>
+            <li>Techniques for manifesting abundance</li>
+            <li>Healing and balancing energies</li>
+            <li>Case studies and practice sessions</li>
+        </ul>
+        <p class="duration"><strong>Duration:</strong> 30 hours (2 weeks)</p>
+        <a href="#" class="btn">Enroll Now</a>
+    </div>
+</div>
+        </div>
+
+        
+        <section class="testimonial-section">
+            <h3>Student Testimonials</h3>
+            <div class="testimonial">
+                <p>"The Reiki certification program transformed my life completely. The structured approach made complex concepts easy to understand."</p>
+                <p>- Sarah J., Level 3 Graduate</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <h4>Is prior experience required?</h4>
+                <p>No previous experience needed - we start from the basics!</p>
+            </div>
+            <div class="faq-item">
+                <h4>Are certifications recognized?</h4>
+                <p>Our program is accredited by the International Reiki Association.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

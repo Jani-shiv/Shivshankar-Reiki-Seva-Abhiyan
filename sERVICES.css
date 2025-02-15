@@ -1,0 +1,300 @@
+/* Reset and base styles */
+:root {
+    --primary-color: #7E57C2;
+    --secondary-color: #B39DDB;
+    --text-color: #333;
+    --light-bg: #F5F5F5;
+    --white: #FFFFFF;
+    --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero-services {
+    background: linear-gradient(rgba(126, 87, 194, 0.9), rgba(179, 157, 219, 0.9)), url('assets/services-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-services h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: var(--white-);
+    line-height: 1.6;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-services h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.service-card {
+    background: #ffffff;
+border-radius: 15px;
+padding: 40px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+transition: transform 0.4s ease;
+border: 1px solid #d5d5d5;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.service-card h3 {
+    color: #2c3e50;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.duration {
+    color: #e67e22;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.benefits {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.benefits li {
+    margin: 10px 0;
+    color: #666666;
+}
+
+/* Specialized Section */
+.specialized-section {
+    background: #f5f6fa;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.program-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e5e5e5;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.package-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e5e5e5;
+}
+
+.package-card.popular {
+    border: 2px solid #e67e22;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #e67e22;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.price {
+    font-size: 2em;
+    color: #2c3e50;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: #f5f6fa;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e5e5e5;
+}
+
+/* CTA Section */
+.cta-services {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/cta-bg.jpg');
+    background-size: cover;
+    color: white;
+    background: linear-gradient(to bottom, #3498db, #2ecc71);
+}
+
+/* Buttons */
+.cta-button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background: #d35400;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Icons */
+[class^="icon-"] {
+    font-size: 2em;
+    color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-services h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        
+    }
+    
+    .services-grid,
+    .program-grid,
+    .package-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card,
+    .program-card,
+    .package-card,
+    .faq-item {
+        margin: 10px;
+    }
+}
+
+/* Links */
+a {
+    color: #e67e22;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d35400;
+}
+
+/* Contact Link */
+.contact-link {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #2c3e50;
+    display: inline-block;
+    border: 1px solid #e67e22;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+    background-size: cover;
+    color: #2c3e50;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+    transition: background 0.3s ease, color 0.3s ease;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+    background-size: cover;
+    background-color: #2ecc71;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.service-card,
+.program-card,
+.package-card {
+   animation: fadeIn 0.5s ease-in forwards;
+    will-change: transform, opacity;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-delay: calc(0.1s * var(--order));
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-fill-mode: both;
+
+}
