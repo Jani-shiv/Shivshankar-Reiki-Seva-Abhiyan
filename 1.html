@@ -11,6 +11,7 @@
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
     <link href="NAVBAR.CSS" rel="stylesheet">
+        <link href="navbar-soft.css" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,22 +24,8 @@
 </head>
 <body >
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.jpg" alt="Shivshankar Reiki Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="home.html" class="active">Home</a></li>
-            <li><a href="ABOUT.HTML">About</a></li>
-            <li><a href="SERVICES.HTML">Services</a></li>
-            <li><a href="EVENT.HTML">Events</a></li>
-            <li><a href="CONTACT.HTML">Contact</a></li>
-            <li><a href="COURCES.HTML">Cources</a></li>
-        </ul>
-        <div class="cta">
-            <a href="Booksession.html" class="book-btn">Book Now</a>
-        </div>
-    </nav>
+        <!-- Navigation will be loaded dynamically -->
+        <script src="navbar-loader.js"></script>
 
     <header id="home" class="hero-section vh-100 d-flex align-items-center bg-light">
     <div class="container py-6"  >
@@ -54,11 +41,7 @@
             </div>
         </div>
     </div>
-</header>2
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-            console.log("Navbar loaded successfully.");});
-        </script>
+        </header>
     </header>
 
     <!-- Scripts -->
