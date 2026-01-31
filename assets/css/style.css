@@ -860,5 +860,115 @@ ul {
 .social-btn:hover {
     background: var(--primary);
     color: white;
-    transform: translateY(-3px);
+
+/* Courses Page Styles */
+.course-card {
+    background: white;
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.course-header {
+    background: linear-gradient(135deg, var(--primary), #4a4575);
+    color: white;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-header::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.course-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.course-body {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.course-features {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.course-features li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.course-features li i {
+    color: var(--secondary);
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.why-us-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.why-us-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-cream);
+    color: var(--secondary);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.why-us-card:hover .why-icon {
+    background: var(--secondary);
+    color: white;
+    transform: rotateY(180deg);
 }
