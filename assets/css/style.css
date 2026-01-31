@@ -450,3 +450,51 @@ ul {
     background: var(--secondary);
     color: var(--primary-dark);
 }
+
+/* Testimonials */
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
+    color: var(--secondary-hover);
+}
+
+/* Stats */
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
