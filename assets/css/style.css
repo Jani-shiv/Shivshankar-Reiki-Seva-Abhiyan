@@ -857,118 +857,133 @@ ul {
     transition: all 0.3s ease;
 }
 
-.social-btn:hover {
     background: var(--primary);
     color: white;
+    transform: translateY(-3px);
+}
 
 /* Courses Page Styles */
 .course-card {
     background: white;
-    padding: 0;
     border-radius: 20px;
+    overflow: hidden;
     box-shadow: var(--shadow-soft);
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    overflow: hidden;
-    height: 100%;
+    position: relative;
     border: 1px solid rgba(0,0,0,0.03);
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .course-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-}
-
-.course-header {
-    background: linear-gradient(135deg, var(--primary), #4a4575);
-    color: white;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.course-header::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.3;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 .course-badge {
-    background: rgba(255,255,255,0.2);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 10;
     backdrop-filter: blur(5px);
 }
 
-.course-body {
+.course-badge.exclusive {
+    background: linear-gradient(135deg, var(--secondary) 0%, #e2c275 100%);
+    color: white;
+}
+
+.course-header {
+    background: #f8fafc;
+    padding: 30px;
+    border-bottom: 1px solid #f1f5f9;
+    text-align: center;
+}
+
+.course-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 10px 0;
+    display: block;
+}
+
+.course-price span {
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 500;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.course-content {
     padding: 30px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.course-price {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--secondary);
-    margin-bottom: 15px;
-}
-
 .course-features {
     list-style: none;
-    margin: 20px 0;
     padding: 0;
+    margin: 0 0 25px 0;
+    flex-grow: 1;
 }
 
 .course-features li {
     margin-bottom: 12px;
     display: flex;
     align-items: center;
-    color: #4a5568;
+    color: #64748b;
     font-size: 0.95rem;
 }
 
 .course-features li i {
-    color: var(--secondary);
-    margin-right: 10px;
-    font-size: 1.1rem;
+    color: var(--secondary); /* Gold checkmarks */
+    margin-right: 12px;
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
-.why-us-card {
-    text-align: center;
-    padding: 40px 30px;
+.workshop-card {
     background: white;
     border-radius: 20px;
-    transition: transform 0.3s ease;
-}
-
-.why-us-card:hover {
-    transform: translateY(-5px);
-}
-
-.why-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--bg-cream);
-    color: var(--secondary);
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
     transition: all 0.3s ease;
 }
 
-.why-us-card:hover .why-icon {
+.workshop-card:hover {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-5px);
+}
+
+.workshop-icon {
+    width: 70px;
+    height: 70px;
+    background: #fff9e6;
+    color: var(--secondary);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.workshop-card:hover .workshop-icon {
     background: var(--secondary);
     color: white;
-    transform: rotateY(180deg);
+    transform: rotate(10deg);
 }
