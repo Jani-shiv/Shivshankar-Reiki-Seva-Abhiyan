@@ -518,79 +518,130 @@ ul {
 /* Timeline */
 .timeline {
     position: relative;
-    max-width: 800px;
-    margin: 50px auto;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px 0;
 }
 
 .timeline::after {
     content: '';
     position: absolute;
-    width: 2px;
-    background-color: var(--secondary);
+    width: 3px;
+    background: linear-gradient(180deg, var(--secondary) 0%, rgba(226, 194, 117, 0.3) 100%);
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -1px;
+    border-radius: 2px;
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 20px 60px;
     position: relative;
     background-color: inherit;
     width: 50%;
 }
 
+/* Circle Dots */
 .timeline-item::after {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    right: -10px;
+    width: 24px;
+    height: 24px;
     background-color: white;
     border: 4px solid var(--secondary);
-    top: 15px;
     border-radius: 50%;
     z-index: 1;
+    top: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 4px rgba(226, 194, 117, 0.2);
+}
+
+.timeline-item:hover::after {
+    background-color: var(--secondary);
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(226, 194, 117, 0.3);
 }
 
 .left {
     left: 0;
+}
+
+.left .content {
     text-align: right;
+    margin-right: 0; 
 }
 
 .right {
     left: 50%;
+}
+
+.right .content {
     text-align: left;
+    margin-left: 0;
+}
+
+/* Align dots correctly */
+.left::after {
+    right: -12px;
 }
 
 .right::after {
-    left: -10px;
+    left: -12px;
 }
 
 .content {
-    padding: 20px 30px;
+    padding: 30px;
     background-color: white;
     position: relative;
-    border-radius: 15px;
-    box-shadow: var(--shadow-soft);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Softer shadow */
+    border: 1px solid rgba(0,0,0,0.02);
 }
 
-@media (max-width: 600px) {
+.content h3 {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.content h4 {
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.content p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
   .timeline::after {
-    left: 31px;
+    left: 40px;
   }
   
   .timeline-item {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 90px;
+    padding-right: 20px;
   }
   
   .timeline-item::after {
-    left: 21px;
+    left: 28px; /* 40 - 12 */
+    top: 25px; /* Adjust based on new padding */
+  }
+  
+  .left::after, .right::after {
+      left: 28px;
+      right: auto;
   }
   
   .left {
+      text-align: left;
+  }
+  
+  .left .content, .right .content {
       text-align: left;
   }
   
