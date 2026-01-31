@@ -1,493 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Shivshankar Reiki</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="NAVBAR.CSS" rel="stylesheet">
-        <link href="navbar-soft.css" rel="stylesheet">
-        <link href="navbar-soft.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2D3E50;
-            --secondary-color: #B2DFDB;
-            --accent-color: #E1BEE7;
-            --text-color: #4A4A4A;
-            --bg-color: #F8F9FA;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-        }
-
-        .hero-about {
-            background: linear-gradient(to bottom, #E8F5E9, #B2DFDB);
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .our-story {
-            display: flex;
-            padding: 80px 20px;
-            background: #FFFFFF;
-        }
-
-        .mission-section {
-            background: var(--bg-color);
-            padding: 80px 20px;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .value-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .team-section {
-            background: linear-gradient(to bottom, #F3E5F5, #E1BEE7);
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .profile img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            background: var(--primary-color);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .usp-section {
-            background: #FFF8E1;
-            border: 2px solid var(--secondary-color);
-            padding: 80px 20px;
-        }
-
-        .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .cta-about {
-            background: linear-gradient(to bottom, #C8E6C9, #B2DFDB);
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .secondary-button {
-            background: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 15px 30px;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            margin-left: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .secondary-button:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .our-story {
-                flex-direction: column;
-            }
-            
-            .secondary-button {
-                margin: 20px 0 0 0;
-            }
-        }
-    </style>
-    <style>
-        .team-section {
-            background: linear-gradient(to bottom, #F3E5F5, #E1BEE7);
-            padding: 80px 20px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-    
-        .section-title {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-    
-        .profile {
-            display: inline-block;
-            text-align: center;
-            margin: 0 auto;
-        }
-    
-        .profile-picture {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-    
-        .profile-name {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-    
-        .profile-description {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-    
-        .profile-specialization {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-    
-        .cta-button {
-            background: var(--primary-color);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-    
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-    
-        :root {
-        --primary-color: #3E5B77; /* Darker primary color */
-        --secondary-color: #B2DFDB; /* Soft secondary color */
-        --accent-color: #FF6F61; /* Vibrant accent color */
-        --text-color: #333333; /* Darker text color for better readability */
-        --bg-color: #F0F4F8; /* Softer background color */
-    }
-    
-    h1, h2, h3 {
-        font-family: 'Playfair Display', serif;
-        color: var(--primary-color);
-        margin-bottom: 20px; /* Increased margin for better spacing */
-    }
-    
-    .cta-button {
-        background: var(--accent-color);
-        color: white;
-        padding: 20px 40px; /* Larger padding for buttons */
-        border-radius: 30px; /* More rounded corners */
-        font-size: 1.2em; /* Increased font size */
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    
-    .cta-button:hover {
-        background: #FF4C3B; /* Darker shade on hover */
-        transform: scale(1.05); /* Slightly enlarge on hover */
-    }
-    </style>
-    <style>
-        .toggle-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-    
-        .toggle-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-    
-        .toggle-icon {
-            font-size: 24px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-    
-        .toggle-card-content {
-            display: none;
-            padding: 20px;
-        }
-    
-        .toggle-card-header.active .toggle-icon {
-            transform: rotate(45deg);
-        }
-    
-        .toggle-card-header.active + .toggle-card-content {
-            display: block;
-        }
-    </style>
+    <title>About Us | Shivshankar Reiki</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-     <!-- Navigation -->
-    <!-- Navigation will be loaded dynamically -->
-    <script src="navbar-loader.js"></script>
+
+    <!-- Navigation loaded dynamically -->
+    <div id="navbar-placeholder"></div>
+
     <!-- Hero Section -->
-    <div class="hero-about">
-        <h1>Welcome to Shivshankar Reiki</h1>
-        <p>Where Energy Meets Compassion</p>
-<p>Experience the transformative power of Reiki and discover a deeper sense of balance and harmony in your life.</p>
-<p>At Shivshankar Reiki, we're dedicated to helping you unlock your full potential and live a more authentic, meaningful life.</p>
-    </div>
-
- <!-- Our Story Section -->
-  <div class="container">
-  <div class="row">
-    <div class="row">
-  <div class="row">
-  <div class="col-md-6">
-    <div class="text-section">
-      <h2 class="mb-4">Our Humble Beginnings</h2>
-      <p class="mb-4">Founded in 2010 by Master Reiki Practitioner Shivshankar, our journey began as a small healing space dedicated to bringing balance and peace to those seeking wellness. Through years of dedicated practice and countless transformative sessions, we've grown into a sanctuary of healing and spiritual growth.</p>
-      <blockquote class="blockquote mb-4">
-        <p class="mb-0">"Reiki is not just a practice—it's a way of life. Our mission is to help you reconnect with your inner light." — Shivshankar</p>
-      </blockquote>
-  </div>
-  <div class="mb-6">
-    <div class="image-section">
-      <img src="logo.jpg" alt="Shivshankar performing Reiki" class="circle-image img-fluid">
-    </div>
-  </div>
-</div>
-  </div>
-        <div class="story-grid">
-          <div class="story-item">
-            <h3 class="mb-3">Our Vision</h3>
-            <p class="mb-4">To create a world where everyone has access to the healing power of Reiki.</p>
-          </div>
-          <div class="story-item">
-            <h3 class="mb-3">Our Mission</h3>
-            <p class="mb-4">To empower individuals to heal themselves by restoring the natural flow of energy within their bodies, minds, and spirits.</p>
-          </div>
-          <div class="story-item">
-            <h3 class="mb-3">Our Values</h3>
-            <p class="mb-4">Compassion, Integrity, and Community are at the heart of everything we do.</p>
-          </div>
+    <section class="hero text-center" style="padding: 100px 0 60px;">
+        <div class="container hero-content">
+            <h1 class="hero-title">Where Energy Meets Compassion</h1>
+            <p class="hero-subtitle">Experience the transformative power of Reiki and discover a deeper sense of balance and harmony in your life.</p>
         </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
+    </section>
 
-<style>
-  .our-story {
-    padding: 80px 20px;
-    background: #FFFFFF;
-  }
-
-  .text-section {
-    padding: 20px;
-  }
-
-  .image-section {
-    padding: 20px;
-  }
-
-  .story-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  .story-item {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-
-  .circle-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .circle-image:hover {
-    transform: scale(1.1);
-  }
-</style>
-
-    <!-- Our Mission Section -->
-    <div class="mission-section">
-        <h2>Our Mission</h2>
-        <p>To empower individuals to heal themselves by restoring the natural flow of energy within their bodies, minds, and spirits.</p>
-        
-        <div class="values-grid">
-            <div class="value-card">
-                <h3>Compassion</h3>
-                <p>Every session is rooted in empathy and unconditional support.</p>
+    <!-- Our Mission -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 50px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Our Mission</h2>
+                <p style="font-size: 1.1rem; color: #64748b;">
+                    To empower individuals to heal themselves by restoring the natural flow of energy within their bodies, minds, and spirits.
+                </p>
             </div>
-            <div class="value-card">
-                <h3>Integrity</h3>
-                <p>We honor the traditional principles of Reiki with authenticity.</p>
-            </div>
-            <div class="value-card">
-                <h3>Community</h3>
-                <p>We foster a safe space for collective healing and growth.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Team Section -->
-   <div class="team-section">
-    <h2 class="section-title">Meet Your Guide</h2>
-    <div class="profile">
-        <img src="p1.jpg" alt="Shivshankar performing Reiki" class="circle-image"> 
-        <h3 class="profile-name">Dr.Tarunkumar Jani</h3>
-        <p class="profile-description"><p class="profile-description">
-    <span>Reiki Grand Master Healer & Teacher</span><br>
-    <span>Past Life Regression Therapist & Teacher</span><br>
-    <span>Karuna Reiki Master Healer & Teacher</span><br>
-    <span>Hypnotherapist & Teacher</span><br>
-    <span>Angel Healing Therapist</span><br>
-    <span>Crystal Healing Therapist</span><br>
-   <span style="font-weight: bold;">15+ Years of Experience</span>
-</p>
-        <p class="profile-specialization" style="font-size: 1.5em; margin-bottom: 25px; text-align: center; color: var(--primary-color); font-weight: bold;">Expertise in:</p>
-<ul class="profile-specialization-list" style="list-style: none; padding: 0; margin: 0; text-align: center;">
-    <li style="display: inline-block; margin: 0 10px; color: var(--accent-color); font-size: 1.2em;">Chakra Balancing</li>
-    <li style="display: inline-block; margin: 0 10px; color: var(--accent-color); font-size: 1.2em;">Distance Healing</li>
-    <li style="display: inline-block; margin: 0 10px; color: var(--accent-color); font-size: 1.2em;">Trauma Recovery</li>
-    <li style="display: inline-block; margin: 0 10px; color: var(--accent-color); font-size: 1.2em;">Meditation</li>
-    <li style="display: inline-block; margin: 0 10px; color: var(--accent-color); font-size: 1.2em;">Mindfulness</li>
-</ul>
-    </div>
-</div>
-
-
-    <!-- Unique Selling Propositions -->
-   <div class="usp-section">
-   <h2 style="text-align: center; animation: flying-text 3s infinite;">Why Choose Shivshankar Reiki?</h2>
-
-<style>
-    @keyframes flying-text {
-        0% {
-            transform: translateX(-100px);
-        }
-        100% {
-            transform: translateX(100px);
-        }
-    }
-</style>
-    <div class="usp-grid">
-        <div class="usp-item">
-            <div class="toggle-card">
-                <div class="toggle-card-header">
-                    <h3>Personalized Sessions</h3>
-                    <span class="toggle-icon">+</span>
+            
+            <div class="card-grid">
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Compassion</h3>
+                    <p>Every session is rooted in empathy and unconditional support for your journey.</p>
                 </div>
-                <div class="toggle-card-content">
-                    <p>Tailored to your unique energy needs and goals.</p>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-star"></i></div>
+                    <h3>Integrity</h3>
+                    <p>We honor the traditional principles of Usui Reiki with absolute authenticity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-users"></i></div>
+                    <h3>Community</h3>
+                    <p>We foster a safe, inclusive space for collective healing and spiritual growth.</p>
                 </div>
             </div>
         </div>
-        <div class="usp-item">
-            <div class="toggle-card">
-                <div class="toggle-card-header">
-                    <h3>Certified Expertise</h3>
-                    <span class="toggle-icon">+</span>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="assets/images/logo.jpg" alt="Shivshankar Reiki" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-soft);">
                 </div>
-                <div class="toggle-card-content">
-                    <p>Internationally accredited Reiki Master with 1,000+ sessions.</p>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Our Humble Beginnings</h2>
+                    <p style="margin-bottom: 20px; color: #4a5568;">
+                        Founded in 2010 by Master Reiki Practitioner Shivshankar, our journey began as a small healing space dedicated to bringing balance and peace to those seeking wellness.
+                    </p>
+                    <p style="margin-bottom: 30px; color: #4a5568;">
+                        Through years of dedicated practice and countless transformative sessions, we've grown into a sanctuary of healing and spiritual growth. Reiki is not just a practice—it's a way of life.
+                    </p>
+                    <blockquote style="border-left: 4px solid var(--secondary); padding-left: 20px; font-style: italic; color: var(--primary);">
+                        "Our mission is to help you reconnect with your inner light." — Shivshankar
+                    </blockquote>
                 </div>
             </div>
         </div>
-        <div class="usp-item">
-            <div class="toggle-card">
-                <div class="toggle-card-header">
-                    <h3>Holistic Approach</h3>
-                    <span class="toggle-icon">+</span>
+    </section>
+
+    <!-- Meet Your Guide -->
+    <section class="section" style="background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 50px;">Meet Your Guide</h2>
+            
+            <div style="background: white; padding: 50px; border-radius: 20px; box-shadow: var(--shadow-soft); max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+                <img src="assets/images/p1.jpg" alt="Dr. Tarunkumar Jani" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 30px; border: 4px solid var(--secondary);">
+                
+                <h3 style="font-size: 2rem; margin-bottom: 10px;">Dr. Tarunkumar Jani</h3>
+                <p style="color: var(--primary); font-weight: 600; margin-bottom: 25px;">Reiki Grand Master Healer & Teacher</p>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 30px;">
+                    <span style="background: #f0f4f8; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: #4a5568;">Past Life Regression</span>
+                    <span style="background: #f0f4f8; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: #4a5568;">Karuna Reiki</span>
+                    <span style="background: #f0f4f8; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: #4a5568;">Hypnotherapy</span>
+                    <span style="background: #f0f4f8; padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; color: #4a5568;">Crystal Healing</span>
                 </div>
-                <div class="toggle-card-content">
-                    <p>Combines Reiki with mindfulness and lifestyle guidance.</p>
-                </div>
+                
+                <p style="font-weight: 700; color: var(--secondary-hover); font-size: 1.1rem;">15+ Years of Experience</p>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-
-
-<script>
-    const toggleCards = document.querySelectorAll('.toggle-card');
-
-    toggleCards.forEach((card) => {
-        const header = card.querySelector('.toggle-card-header');
-        const content = card.querySelector('.toggle-card-content');
-
-        header.addEventListener('click', () => {
-            header.classList.toggle('active');
-            content.classList.toggle('active');
-        });
-    });
-</script>
-
-    <!-- Call to Action -->
-    <div class="cta-about">
-        <h2>Ready to Begin Your Healing Journey?</h2>
-        <p>Whether you're new to Reiki or seeking deeper energy work, we're here to guide you.</p>
-        <a href="Booksession.html" target="_blank"><button class="cta-button">Book a Session</button></a>
-        <a href="COURCES.HTML"><button class="secondary-button">Explore Our Courses</button></a>
-    </div>
-        <!-- Spiritual Footer -->
-        <footer class="spiritual-footer" style="background:linear-gradient(90deg,#f8fafc 0%,#e2c275 100%);color:#7c5e2c;padding:32px 0;text-align:center;font-family:'Merriweather',serif;box-shadow:0 -2px 8px rgba(226,194,117,0.08);margin-top:48px;">
-            <div style="font-size:1.2rem;margin-bottom:8px;">
-                <i class="fas fa-dove" style="margin-right:8px;color:#e2c275;"></i>
-                Shivshankar Reiki &mdash; Healing, Harmony, and Spiritual Growth
+    <!-- CTA -->
+    <section class="section text-center" style="background-color: var(--primary-dark); color: white;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Begin Your Healing Journey?</h2>
+            <p style="color: #cbd5e0; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Whether you're new to Reiki or seeking deeper energy work, we're here to guide you every step of the way.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="Booksession.html" class="btn btn-primary">Book a Session</a>
+                <a href="COURCES.HTML" class="btn btn-secondary" style="border-color: white; color: white;">Explore Courses</a>
             </div>
-            <div style="margin-bottom:8px;">
-                <a href="home.html" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Home</a>|
-                <a href="ABOUT.HTML" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">About</a>|
-                <a href="CONTACT.HTML" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Contact</a>|
-                <a href="COURCES.HTML" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Courses</a>|
-                <a href="Booksession.html" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Book Session</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="nav-brand" style="color: white; margin-bottom: 20px;">
+                        <img src="assets/images/logo.jpg" alt="Logo" style="border-color: rgba(255,255,255,0.2);"> Shivshankar Reiki
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="padding: 0;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="ABOUT.HTML">About</a></li>
+                        <li><a href="SERVICES.HTML">Services</a></li>
+                        <li><a href="COURCES.HTML">Courses</a></li>
+                    </ul>
+                </div>
             </div>
-            <div style="font-size:0.95rem;">&copy; 2025 Shivshankar Reiki Seva Abhiyan. All rights reserved.</div>
-        </footer>
+            <div class="footer-bottom">
+                &copy; 2025 Shivshankar Reiki Seva Abhiyan. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/navbar-loader.js"></script>
 </body>
 </html>

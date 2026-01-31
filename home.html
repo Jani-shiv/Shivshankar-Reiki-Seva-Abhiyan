@@ -1,112 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reiki Healing - Restore Your Balance</title>
-        <link href="NAVBAR.CSS" rel="stylesheet">
-        <link href="INDEX.CSS" rel="stylesheet">
-        <link href="navbar-soft.css" rel="stylesheet">
-        <link href="navbar-soft.css" rel="stylesheet">
-
-
-</head>
-<body>
-    <!-- Navigation will be loaded dynamically -->
-    <script src="navbar-loader.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shivshankar Reiki | Restore Your Balance</title>
+    <!-- Modern Stylesheet -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation loaded dynamically -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
-    <div class="hero-section">
-      <h1 class="animate__animated animate__fadeInDown">Reiki Healing: Restore Your Body, Mind, and Spirit</h1>
-<h3 class="animate__animated animate__fadeInUp">Experience the ancient Japanese art of energy healing to dissolve stress, awaken inner peace, and harmonize your life force.</h3>
-<br>
-<br>
-<a href="Booksession.html" target="_blank"><button class="cta-button animate__animated animate__pulse" >Book a Session</button></a>
-    </div>
+    <section class="hero text-center" style="position: relative">
+      <!-- Delicate background pattern overlay -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2c275' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
+          opacity: 0.6;
+          pointer-events: none;
+        "
+      ></div>
 
-    <div class="section">
-        <h2>What is Reiki?</h2>
-        <p>Reiki (霊気) is a holistic healing technique originating in Japan, where a practitioner channels universal life force energy to activate your body's natural healing abilities. It's gentle, non-invasive, and works on physical, emotional, and spiritual levels.</p>
-        <div class="highlight-box">
-            <h3  >Key Principles of Reiki:</h3>
-            <br>
-                <h4>🌀 Balance energy flow (Ki)</h4>
-                <h4>💖 Release emotional blockages</h4>
-                <h4>🌿 Enhance mental clarity</h4>
-                <h4>✨ Promote deep relaxation</h4>
-                 <h4>🌬️ Boost immune function</h4>
-                <h4>🌿 Promote deep relaxation</h4>
-            </div>
-    </div>
-
-<div class="section">
-        <h2>How Reiki Works</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Step 1: Intention Setting</h3>
-                <p>We discuss your goals (e.g., stress relief, pain management).</p>
-            </div>
-            <div class="card">
-                <h3>Step 2: Energy Channeling</h3>
-                <p>Universal energy flows through the practitioner to you.</p>
-            </div>
-            <div class="card">
-                <h3>Step 3: Balance & Renewal</h3>
-                <p>Your body's natural healing processes are activated.</p>
-            </div>
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Restore Your Body, <br />
+          Mind, and Spirit
+        </h1>
+        <p class="hero-subtitle">
+          Experience the ancient Japanese art of energy healing to dissolve
+          stress, awaken inner peace, and harmonize your life force.
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a href="Booksession.html" class="btn btn-primary">Book a Session</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="section">
-        <h2>Benefits of Reiki</h2>
-        <div class="benefits-grid">
-            <div class="benefit-item">
-                <h3>Emotional Healing</h3>
-                <p>Release anxiety, grief, and past traumas.</p>
-            </div>
-            <div class="benefit-item">
-                <h3>Physical Relief</h3>
-                <p>Alleviate chronic pain, fatigue, and insomnia.</p>
-            </div>
-            <div class="benefit-item">
-                <h3>Mental Clarity</h3>
-                <p>Improve focus, creativity, and decision-making.</p>
-            </div>
+    <!-- About / What is Reiki -->
+    <section
+      id="about"
+      class="section"
+      style="background-color: var(--bg-white)"
+    >
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 60px">
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px">What is Reiki?</h2>
+          <h3
+            style="
+              color: var(--secondary);
+              font-family: var(--font-body);
+              font-weight: 500;
+              font-size: 1.2rem;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            "
+          >
+            The Art of Healing
+          </h3>
+          <p style="margin-top: 20px; font-size: 1.1rem; color: #64748b">
+            Reiki (霊気) is a holistic healing technique originating in Japan,
+            where a practitioner channels universal life force energy to
+            activate your body's natural healing abilities. It is gentle,
+            non-invasive, and effective.
+          </p>
         </div>
-    </div>
 
-    <div class="session-section">
-        <h2>What to Expect</h2>
-        <p>A typical session includes:</p>
-        <ul>
-            <li>🕯️ 10-minute consultation to set intentions</li>
-            <li>🧘 45 minutes of energy healing (on a massage table)</li>
-            <li>🍵 15-minute post-session reflection with herbal tea</li>
-        </ul>
-        <p class="note">Wear comfortable clothing. No oils or physical manipulation are used.</p>
-    </div>
+        <div class="card-grid">
+          <div class="feature-card">
+            <div class="icon-box"><i class="fas fa-seedling"></i></div>
+            <h3>Balance Energy</h3>
+            <p>
+              Harmonize your flow of life force energy (Ki) to promote physical
+              and emotional well-being.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-box"><i class="fas fa-heart"></i></div>
+            <h3>Release Blockages</h3>
+            <p>
+              Gently dissolve emotional traumas and stress that have settled in
+              the body over time.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-box"><i class="fas fa-brain"></i></div>
+            <h3>Mental Clarity</h3>
+            <p>
+              Clear the noise of daily life to enhance focus, creativity, and
+              inner wisdom.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="icon-box"><i class="fas fa-spa"></i></div>
+            <h3>Deep Relaxation</h3>
+            <p>
+              Experience a profound state of rest that drastically boosts your
+              immune function.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    
-    <div class="cta-section">
-        <h2>Ready to Begin Your Healing Journey?</h2>
-        <p>Book a session today or explore our Reiki courses for self-healing.</p>
-        <a href="Booksession.html" target="_blank"><button class="cta-button">Schedule Now</button></a>
-        <a href="COURCES.HTML"><button class="secondary-button">Learn About Courses</button></a>
-    </div>
-        <!-- Spiritual Footer -->
-        <footer class="spiritual-footer" style="background:linear-gradient(90deg,#f8fafc 0%,#e2c275 100%);color:#7c5e2c;padding:32px 0;text-align:center;font-family:'Merriweather',serif;box-shadow:0 -2px 8px rgba(226,194,117,0.08);margin-top:48px;">
-            <div style="font-size:1.2rem;margin-bottom:8px;">
-                <i class="fas fa-dove" style="margin-right:8px;color:#e2c275;"></i>
-                Shivshankar Reiki &mdash; Healing, Harmony, and Spiritual Growth
+    <!-- Video / Visual Break Section -->
+    <section
+      class="section"
+      style="
+        background: url(&quot;assets/images/p1.jpg&quot;) no-repeat center center/cover;
+        position: relative;
+        padding: 100px 0;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(15, 12, 41, 0.7);
+        "
+      ></div>
+      <div
+        class="container text-center"
+        style="position: relative; z-index: 2; color: white"
+      >
+        <h2 style="color: white; font-size: 3rem; margin-bottom: 20px">
+          Begin Your Journey
+        </h2>
+        <p
+          style="
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.9);
+          "
+        >
+          Ready to transform your life and find your center? Our sessions are
+          tailored to your unique energy needs.
+        </p>
+        <a
+          href="COURSE.HTML"
+          class="btn btn-primary"
+          style="background: var(--secondary); color: var(--primary-dark)"
+          >Explore Courses</a
+        >
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" style="background-color: var(--bg-light)">
+      <div class="container text-center">
+        <h2 style="margin-bottom: 50px">How a Session Works</h2>
+        <div class="card-grid">
+          <div
+            class="feature-card"
+            style="position: relative; overflow: hidden"
+          >
+            <div
+              style="
+                font-size: 4rem;
+                position: absolute;
+                top: -10px;
+                right: 20px;
+                color: rgba(0, 0, 0, 0.05);
+                font-weight: 700;
+              "
+            >
+              1
             </div>
-            <div style="margin-bottom:8px;">
-                <a href="home.html" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Home</a>|
-                <a href="ABOUT.HTML" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">About</a>|
-                <a href="CONTACT.HTML" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Contact</a>|
-                <a href="COURCES.HTML" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Courses</a>|
-                <a href="Booksession.html" style="color:#7c5e2c;margin:0 12px;text-decoration:none;">Book Session</a>
+            <h3>Intention Setting</h3>
+            <p>
+              We begin with a conversation to understand your goals, whether
+              it's pain relief, stress reduction, or spiritual growth.
+            </p>
+          </div>
+          <div
+            class="feature-card"
+            style="position: relative; overflow: hidden"
+          >
+            <div
+              style="
+                font-size: 4rem;
+                position: absolute;
+                top: -10px;
+                right: 20px;
+                color: rgba(0, 0, 0, 0.05);
+                font-weight: 700;
+              "
+            >
+              2
             </div>
-            <div style="font-size:0.95rem;">&copy; 2025 Shivshankar Reiki Seva Abhiyan. All rights reserved.</div>
-        </footer>
-</body>
+            <h3>Energy Channeling</h3>
+            <p>
+              You lie comfortably while universal energy is channeled to you,
+              often felt as a gentle warmth or tingling.
+            </p>
+          </div>
+          <div
+            class="feature-card"
+            style="position: relative; overflow: hidden"
+          >
+            <div
+              style="
+                font-size: 4rem;
+                position: absolute;
+                top: -10px;
+                right: 20px;
+                color: rgba(0, 0, 0, 0.05);
+                font-weight: 700;
+              "
+            >
+              3
+            </div>
+            <h3>Integration</h3>
+            <p>
+              The session concludes with a period of rest and reflection,
+              allowing your body to integrate the healing shifts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <div class="nav-brand" style="color: white; margin-bottom: 20px">
+              <img
+                src="assets/images/logo.jpg"
+                alt="Logo"
+                style="border-color: rgba(255, 255, 255, 0.2)"
+              />
+              Shivshankar Reiki
+            </div>
+            <p style="color: #a0aec0; line-height: 1.8">
+              Dedicated to bringing harmony and healing to your life through the
+              traditional practice of Usui Reiki.
+            </p>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul style="padding: 0">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="ABOUT.HTML">About</a></li>
+              <li><a href="SERVICES.HTML">Services</a></li>
+              <li><a href="COURCES.HTML">Courses</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact Us</h4>
+            <p style="color: #a0aec0; margin-bottom: 10px">
+              Have questions? Reach out to us.
+            </p>
+            <a
+              href="CONTACT.HTML"
+              class="btn btn-secondary"
+              style="
+                display: inline-block;
+                padding: 8px 20px;
+                font-size: 0.9rem;
+              "
+              >Contact Page</a
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 Shivshankar Reiki Seva Abhiyan. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script to load Navbar -->
+    <script src="assets/js/navbar-loader.js"></script>
+    <script>
+      // Simple scroll reveal
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        });
+
+        document.querySelectorAll(".feature-card").forEach((el) => {
+          el.style.opacity = 0;
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "all 0.6s ease-out";
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
 </html>

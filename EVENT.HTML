@@ -1,99 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events - Reiki Healing Center</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="EVENT.css">
-    <link href="NAVBAR.CSS" rel="stylesheet">
-        <link href="navbar-soft.css" rel="stylesheet">
+    <title>Upcoming Events | Shivshankar Reiki</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation will be loaded dynamically -->
-    <script src="navbar-loader.js"></script>
+
+    <!-- Navigation loaded dynamically -->
+    <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
-    <div class="hero-events">
-        <h1>Reiki Events: Grow, Heal, and Connect</h1>
-        <p>Join our transformative workshops, healing circles, and community gatherings to deepen your energy practice.</p>
-    </div>
+    <section class="hero text-center" style="padding: 100px 0 60px;">
+        <div class="container hero-content">
+            <h1 class="hero-title">Gather & Heal</h1>
+            <p class="hero-subtitle">Join our community events, workshops, and healing circles to deepen your practice and connect with like-minded souls.</p>
+        </div>
+    </section>
 
-    <section class="events-grid">
-        <div class="event-card">
-            <div class="event-date">
-                <span class="day">15</span>
-                <span class="month">Oct</span>
+    <!-- Events Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="card-grid">
+                
+                <!-- Event 1 -->
+                <div class="feature-card" style="text-align: left;">
+                    <div style="background: var(--secondary); color: var(--primary-dark); font-weight: 700; display: inline-block; padding: 5px 15px; border-radius: 5px; margin-bottom: 15px;">
+                        MAR 15, 2025
+                    </div>
+                    <h3>Full Moon Healing Circle</h3>
+                    <p style="color: #64748b; margin-bottom: 10px;"><i class="fas fa-clock" style="margin-right: 5px;"></i> 7:00 PM - 9:00 PM</p>
+                    <p style="color: #64748b; margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> Shivshankar Center, Ahmedabad</p>
+                    <p style="margin-bottom: 20px;">Harness the energy of the full moon for deep emotional release and manifestation. Open to all levels.</p>
+                    <a href="Booksession.html" class="btn btn-primary" style="width: 100%; text-align: center;">Register (₹500)</a>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="feature-card" style="text-align: left;">
+                    <div style="background: var(--secondary); color: var(--primary-dark); font-weight: 700; display: inline-block; padding: 5px 15px; border-radius: 5px; margin-bottom: 15px;">
+                        APR 05, 2025
+                    </div>
+                    <h3>Reiki Level 1 Workshop</h3>
+                    <p style="color: #64748b; margin-bottom: 10px;"><i class="fas fa-clock" style="margin-right: 5px;"></i> 10:00 AM - 5:00 PM</p>
+                    <p style="color: #64748b; margin-bottom: 20px;"><i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> Shivshankar Center, Ahmedabad</p>
+                    <p style="margin-bottom: 20px;">Begin your journey into energy healing. Learn the basics of self-healing and treating others.</p>
+                    <a href="Booksession.html" class="btn btn-primary" style="width: 100%; text-align: center;">Register (Free)</a>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="feature-card" style="text-align: left;">
+                    <div style="background: var(--secondary); color: var(--primary-dark); font-weight: 700; display: inline-block; padding: 5px 15px; border-radius: 5px; margin-bottom: 15px;">
+                        WEEKLY
+                    </div>
+                    <h3>Online Meditation Group</h3>
+                    <p style="color: #64748b; margin-bottom: 10px;"><i class="fas fa-clock" style="margin-right: 5px;"></i> Every Sunday, 8:00 PM</p>
+                    <p style="color: #64748b; margin-bottom: 20px;"><i class="fas fa-video" style="margin-right: 5px;"></i> Zoom Live</p>
+                    <p style="margin-bottom: 20px;">A free weekly guided meditation and distance healing transmission. Connect from anywhere.</p>
+                    <a href="CONTACT.HTML" class="btn btn-secondary" style="width: 100%; text-align: center;">Get Zoom Link</a>
+                </div>
+
             </div>
-            <h3>New Moon Healing Circle</h3>
-            <p class="details">
-                <i class="icon-clock"></i> 6:00 PM – 8:00 PM
-                <i class="icon-location"></i> Online & In-Person
-            </p>
-            <p>Release old energy under the new moon with guided Reiki and meditation.</p>
-            <ul class="benefits">
-                <li>🌙 Group energy clearing</li>
-                <li>🕯️ Candlelight meditation</li>
-                <li>🎁 Free crystal gift</li>
-            </ul>
-            <button class="cta-button">Reserve Your Spot ($25)</button>
         </div>
+    </section>
 
-        <div class="event-card">
-            <div class="event-date">
-                <span class="day">28</span>
-                <span class="month">Nov</span>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="nav-brand" style="color: white; margin-bottom: 20px;">
+                        <img src="assets/images/logo.jpg" alt="Logo" style="border-color: rgba(255,255,255,0.2);"> Shivshankar Reiki
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="padding: 0;">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="ABOUT.HTML">About</a></li>
+                        <li><a href="SERVICES.HTML">Services</a></li>
+                        <li><a href="COURCES.HTML">Courses</a></li>
+                    </ul>
+                </div>
             </div>
-            <h3>Reiki Level 1 Certification</h3>
-            <p class="details">
-                <i class="icon-clock"></i> 10:00 AM – 4:00 PM
-                <i class="icon-location"></i> 123 Healing Way
-            </p>
-            <p>Begin your journey as a Reiki practitioner with hands-on training.</p>
-            <ul class="benefits">
-                <li>📚 Comprehensive manual</li>
-                <li>🔮 Attunement ceremony</li>
-                <li>🎓 Certificate included</li>
-            </ul>
-            <button class="cta-button">Enroll Now ($299)</button>
+            <div class="footer-bottom">
+                &copy; 2025 Shivshankar Reiki Seva Abhiyan. All rights reserved.
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <section class="categories-section">
-        <h2><i class="icon-filter"></i> Explore by Category</h2>
-        <div class="category-buttons">
-            <button class="category-btn active">All Events</button>
-            <button class="category-btn">Workshops</button>
-            <button class="category-btn">Retreats</button>
-            <button class="category-btn">Free Sessions</button>
-        </div>
-    </section>
-
-    <section class="gallery-section">
-        <h2><i class="icon-gallery"></i> Memories from Our Community</h2>
-        <div class="gallery-grid">
-            <img src="images/past-event-1.jpg" alt="Group meditation session">
-            <img src="images/past-event-2.jpg" alt="Reiki certification ceremony">
-            <img src="images/past-event-3.jpg" alt="Outdoor retreat">
-        </div>
-    </section>
-
-    <section class="newsletter-section">
-        <h2>Never Miss a Healing Event</h2>
-        <p>Subscribe for updates on workshops, retreats, and free community sessions.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit" class="cta-button">Subscribe</button>
-        </form>
-    </section>
-
-    <section class="cta-events">
-        <h2>Early Bird Discounts Ending Soon!</h2>
-        <p>Save 20% on our November retreat when you book by October 31st.</p>
-        <a href="Booksession.html" target="_blank"><button class="cta-button">Claim Your Spot</button></a>
-    </section>
-
-    <script src="scripts.js"></script>
+    <script src="assets/js/navbar-loader.js"></script>
 </body>
 </html>
