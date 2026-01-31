@@ -603,27 +603,60 @@ ul {
 .profile-section {
     background: white; 
     border-radius: 20px; 
-    box-shadow: var(--shadow-soft); 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
     overflow: hidden;
-    max-width: 1000px; 
+    max-width: 900px; 
     margin: 0 auto;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.profile-section:hover {
+    transform: translateY(-5px);
 }
 
 .profile-header {
     background: linear-gradient(135deg, var(--primary), #4a4575);
     color: white;
-    padding: 40px;
+    padding: 60px 20px 100px; /* More bottom padding for image overlap */
     text-align: center;
+    position: relative;
+}
+
+.profile-header h2 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+}
+
+.profile-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.profile-img-container {
+    position: relative;
+    margin-top: -80px; /* Pull image up */
+    display: flex;
+    justify-content: center;
 }
 
 .profile-img {
-    width: 200px; 
-    height: 200px; 
+    width: 180px; 
+    height: 180px; 
     border-radius: 50%; 
-    border: 5px solid white; 
+    border: 6px solid white; 
     object-fit: cover; 
-    margin-top: -100px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    animation: float 6s ease-in-out infinite;
+    background-color: white;
+    z-index: 10;
 }
 
 .skills-grid {
@@ -635,13 +668,62 @@ ul {
 
 .skill-tag {
     background: #f8fafc;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: 500;
-    color: #4a5568;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--primary);
     border: 1px solid #e2e8f0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.skill-tag:hover {
+     background: var(--primary);
+     color: white;
+     border-color: var(--primary);
+     transform: translateY(-3px);
+     box-shadow: 0 5px 15px rgba(48, 43, 99, 0.2);
+}
+
+.skill-tag i {
+    color: var(--secondary);
+}
+
+.skill-tag:hover i {
+    color: white;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(226, 194, 117, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(226, 194, 117, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(226, 194, 117, 0); }
+}
+
+.pulse-animation {
+    animation: pulse-glow 2s infinite;
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Timeline Polish */
+.timeline-item .content {
+    transition: transform 0.3s ease;
+}
+.timeline-item:hover .content {
+    transform: scale(1.02);
+    border-left: 4px solid var(--secondary);
 }
