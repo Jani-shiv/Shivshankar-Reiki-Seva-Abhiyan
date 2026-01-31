@@ -857,6 +857,7 @@ ul {
     transition: all 0.3s ease;
 }
 
+.social-btn:hover {
     background: var(--primary);
     color: white;
     transform: translateY(-3px);
@@ -982,8 +983,110 @@ ul {
     transition: all 0.3s ease;
 }
 
-.workshop-card:hover .workshop-icon {
     background: var(--secondary);
     color: white;
     transform: rotate(10deg);
+}
+
+/* Booking Page Styles */
+.booking-form-wrapper {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.booking-info-card {
+    background: #fdfbf7;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 194, 117, 0.2);
+    margin-bottom: 30px;
+}
+
+.booking-info-card h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    color: #4a5568;
+}
+
+.info-list i {
+    color: var(--secondary);
+    margin-top: 4px;
+}
+
+.session-radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.session-radio-label {
+    cursor: pointer;
+    position: relative;
+}
+
+.session-radio-input {
+    display: none;
+}
+
+.session-card-select {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: white;
+    height: 100%;
+}
+
+.session-radio-input:checked + .session-card-select {
+    border-color: var(--secondary);
+    background-color: #fffaf0;
+    box-shadow: 0 4px 12px rgba(226, 194, 117, 0.2);
+    transform: translateY(-2px);
+}
+
+.session-card-select i {
+    font-size: 1.5rem;
+    color: #94a3b8;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.session-radio-input:checked + .session-card-select i {
+    color: var(--secondary);
+}
+
+.session-card-select span {
+    display: block;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+/* Custom Input Styles override/additions */
+.form-section-title {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-top: 10px;
 }

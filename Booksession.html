@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Session | Shivshankar Reiki</title>
+    <title>Book Your Session | Shivshankar Reiki</title>
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,84 +12,144 @@
     <!-- Navigation loaded dynamically -->
     <div id="navbar-placeholder"></div>
 
-    <section class="section" style="min-height: 80vh; display: flex; align-items: center;">
+    <!-- Hero Section -->
+    <section class="hero text-center" style="padding: 140px 0 60px;">
+        <div class="container hero-content">
+            <h1 class="hero-title slide-up">Begin Your Healing Journey</h1>
+            <p class="hero-subtitle slide-up" style="transition-delay: 0.2s;">Take the first step towards balance, clarity, and inner peace. Reserve your session today.</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section" style="background-color: var(--bg-white); padding-bottom: 80px;">
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-soft);">
-                <div class="text-center" style="margin-bottom: 30px;">
-                    <h1 style="margin-bottom: 10px;">Book Your Session</h1>
-                    <p style="color: #64748b;">Relaxation and healing are just a few clicks away.</p>
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
+                
+                <!-- Left: Booking Form -->
+                <div class="booking-form-wrapper slide-up">
+                    <h2 style="margin-bottom: 25px;">Appointment Details</h2>
+                    
+                    <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="3720c10d-f363-456c-ad84-ce7be61a4e15">
+                        
+                        <!-- Service Selection -->
+                        <h4 class="form-section-title">1. Choose Service Type</h4>
+                        <div class="session-radio-group">
+                            <label class="session-radio-label">
+                                <input type="radio" name="service_type" value="In-Person Healing" class="session-radio-input" checked>
+                                <div class="session-card-select">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    <span>In-Person</span>
+                                </div>
+                            </label>
+                            <label class="session-radio-label">
+                                <input type="radio" name="service_type" value="Distance Healing" class="session-radio-input">
+                                <div class="session-card-select">
+                                    <i class="fas fa-wifi"></i>
+                                    <span>Distance</span>
+                                </div>
+                            </label>
+                            <label class="session-radio-label">
+                                <input type="radio" name="service_type" value="Course Enrollment" class="session-radio-input">
+                                <div class="session-card-select">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Course</span>
+                                </div>
+                            </label>
+                            <label class="session-radio-label">
+                                <input type="radio" name="service_type" value="Consultation" class="session-radio-input">
+                                <div class="session-card-select">
+                                    <i class="fas fa-comments"></i>
+                                    <span>Consult</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Personal Info -->
+                        <h4 class="form-section-title">2. Your Information</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <!-- Schedule -->
+                        <h4 class="form-section-title">3. Preferred Schedule</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time Slot</label>
+                                <select id="time" name="time">
+                                    <option value="" disabled selected>Select Time</option>
+                                    <option>Morning (10 AM - 12 PM)</option>
+                                    <option>Afternoon (12 PM - 4 PM)</option>
+                                    <option>Evening (4 PM - 7 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <h4 class="form-section-title">4. Specific Concerns</h4>
+                        <div class="form-group">
+                            <label for="notes">Notes or Goals</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Is there anything specific you'd like to address? (Physical pain, stress, spiritual guidance, etc.)"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 15px; margin-top: 10px;">
+                            Confirm Booking <i class="fas fa-check-circle" style="margin-left: 10px;"></i>
+                        </button>
+                    </form>
                 </div>
 
-                <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="3720c10d-f363-456c-ad84-ce7be61a4e15">
+                <!-- Right: Info Details -->
+                <div class="slide-up" style="transition-delay: 0.2s;">
                     
-                    <!-- Session Type Selection -->
-                    <div style="margin-bottom: 25px;">
-                        <label style="display: block; margin-bottom: 15px; font-weight: 600; color: var(--primary);">Choose Session Type</label>
-                        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 0;">
-                            
-                            <label class="feature-card" style="padding: 15px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; text-align: center;">
-                                <input type="radio" name="sessionType" value="Individual Session" style="display: none;" onchange="updateSelection(this)">
-                                <div style="font-weight: 600; color: var(--primary);">Individual</div>
-                                <div style="font-size: 0.9rem; color: #64748b;">60 Mins</div>
-                                <div style="color: var(--secondary-hover); font-weight: 700;">₹1,200</div>
-                            </label>
+                    <!-- What to Expect -->
+                    <div class="booking-info-card">
+                        <h3><i class="fas fa-sparkles"></i> What to Expect</h3>
+                        <ul class="info-list">
+                            <li><i class="fas fa-check"></i> Wear comfortable clothing for your session.</li>
+                            <li><i class="fas fa-check"></i> Arrive 10 minutes early to settle in.</li>
+                            <li><i class="fas fa-check"></i> Distance healing is as effective as in-person.</li>
+                        </ul>
+                    </div>
 
-                            <label class="feature-card" style="padding: 15px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; text-align: center;">
-                                <input type="radio" name="sessionType" value="Distance Reiki" style="display: none;" onchange="updateSelection(this)">
-                                <div style="font-weight: 600; color: var(--primary);">Distance</div>
-                                <div style="font-size: 0.9rem; color: #64748b;">45 Mins</div>
-                                <div style="color: var(--secondary-hover); font-weight: 700;">₹1,800</div>
-                            </label>
-
-                            <label class="feature-card" style="padding: 15px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; text-align: center;">
-                                <input type="radio" name="sessionType" value="Course Enrollment" style="display: none;" onchange="updateSelection(this)">
-                                <div style="font-weight: 600; color: var(--primary);">Course</div>
-                                <div style="font-size: 0.9rem; color: #64748b;">Enrollment</div>
-                                <div style="color: var(--secondary-hover); font-weight: 700;">Select</div>
-                            </label>
+                    <!-- Pricing Summary -->
+                    <div class="booking-info-card" style="background: white; border-color: #e2e8f0;">
+                        <h3><i class="fas fa-tags"></i> Session Rates</h3>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px dashed #e2e8f0; padding-bottom: 10px;">
+                            <span style="color: #64748b;">In-Person (60 min)</span>
+                            <span style="font-weight: 700; color: var(--primary);">₹1,200</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px dashed #e2e8f0; padding-bottom: 10px;">
+                            <span style="color: #64748b;">Distance (45 min)</span>
+                            <span style="font-weight: 700; color: var(--primary);">₹1,800</span>
+                        </div>
+                         <div style="display: flex; justify-content: space-between;">
+                            <span style="color: #64748b;">Consultation</span>
+                            <span style="font-weight: 700; color: var(--primary);">Free</span>
                         </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
+                    <!-- Contact Help -->
+                    <div style="text-align: center; margin-top: 20px;">
+                        <p style="color: #64748b; margin-bottom: 10px;">Need help deciding?</p>
+                        <a href="tel:+918980416700" style="color: var(--secondary); font-weight: 600;"><i class="fas fa-phone-alt"></i> call us at +91 89804 16700</a>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="form-group">
-                            <label for="date">Preferred Date</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="time">Preferred Time</label>
-                            <select id="time" name="time">
-                                <option>Morning (10 AM - 12 PM)</option>
-                                <option>Afternoon (2 PM - 5 PM)</option>
-                                <option>Evening (6 PM - 8 PM)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="notes">Notes or Intention</label>
-                        <textarea id="notes" name="notes" rows="3" placeholder="What would you like to focus on?"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;">Confirm Booking</button>
-
-                </form>
             </div>
         </div>
     </section>
@@ -124,17 +184,20 @@
         // Set min date to today
         document.getElementById('date').min = new Date().toISOString().split('T')[0];
 
-        // Selection Visual Logic
-        function updateSelection(radio) {
-            document.querySelectorAll('label.feature-card').forEach(el => {
-                el.style.borderColor = 'transparent';
-                el.style.backgroundColor = 'white';
+        // Scroll Animation
+        document.addEventListener('DOMContentLoaded', () => {
+             const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.slide-up').forEach(el => {
+                observer.observe(el);
             });
-            if (radio.checked) {
-                radio.closest('label').style.borderColor = 'var(--secondary)';
-                radio.closest('label').style.backgroundColor = '#fdfbf7';
-            }
-        }
+        });
     </script>
 </body>
 </html>
